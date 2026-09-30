@@ -1,0 +1,21 @@
+on:
+push:
+branches:["main"]
+pull_request:
+branches:["main"]
+jobs:
+build_and_test:
+runs_on:ubuntu_latest
+steps:
+-name:checkout source code
+uses:actions/checkout@v4
+-name:check project files
+run:1
+echo"Running CI process..."
+Is-la
+-name:Validate HTML
+run:1
+test -f index.html
+echo"HTML file exists"
+-name:CI Sucsess
+run:echo"Build and Validation Copmleted Successfully!"
